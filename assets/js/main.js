@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const filterGallery = (category) => {
     galleryItems.forEach(item => {
-      const match = category === 'all' || item.dataset.category === category;
+      const match = item.dataset.category === category;
       if (match) {
         item.classList.remove('hidden');
       } else {
@@ -127,6 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   };
+
+  filterGallery('hairs');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -227,11 +229,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const goTo = (index) => {
     current = index;
-    track.style.transform = `translateX(-${current * 100}%)`;
+    track.style.transform = `translateX(-${current * track.parentElement.clientWidth}px)`;
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
     dots.forEach((d, i) => d.setAttribute('aria-current', String(i === current)));
   };
 
+  window.addEventListener('resize', () => goTo(current));
   prevBtn.addEventListener('click', () => goTo(current > 0 ? current - 1 : cards.length - 1));
   nextBtn.addEventListener('click', () => goTo(current < cards.length - 1 ? current + 1 : 0));
 
