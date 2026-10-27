@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('preloader');
   setTimeout(() => preloader.classList.add('hidden'), 600);
 
+  const heroVideo = document.querySelector('.hero-video');
+  const heroMuteToggle = document.getElementById('heroMuteToggle');
+  heroMuteToggle.addEventListener('click', () => {
+    heroVideo.muted = !heroVideo.muted;
+    heroMuteToggle.setAttribute('aria-pressed', String(!heroVideo.muted));
+    heroMuteToggle.setAttribute('aria-label', heroVideo.muted ? 'Unmute video' : 'Mute video');
+    heroMuteToggle.innerHTML = `<i class="fa-solid ${heroVideo.muted ? 'fa-volume-xmark' : 'fa-volume-high'}" aria-hidden="true"></i>`;
+  });
+
   /* ---------  AOS INIT  --------- */
   if (window.AOS) {
     AOS.init({
@@ -148,31 +157,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox        = document.getElementById('lightbox');
   const lightboxContent = document.getElementById('lightboxContent');
   const lightboxClose   = document.getElementById('lightboxClose');
+  let lightboxOpener;
 
-  document.querySelectorAll('.gallery-zoom').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = btn.closest('.gallery-card');
-      const image = card.querySelector('.gallery-img');
-      const title = card.querySelector('.gallery-overlay h3').textContent;
-      const desc = card.querySelector('.gallery-overlay p').textContent;
-      const enlargedImage = document.createElement('img');
-      enlargedImage.src = image.src;
-      enlargedImage.alt = image.alt;
-      const heading = document.createElement('h3');
-      heading.textContent = title;
-      const description = document.createElement('p');
-      description.textContent = desc;
-      lightboxContent.replaceChildren(enlargedImage, heading, description);
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      lightboxClose.focus();
+  const openLightbox = (media, opener) => {
+    const isVideo = media instanceof HTMLVideoElement;
+    const enlargedMedia = document.createElement(isVideo ? 'video' : 'img');
+    enlargedMedia.src = isVideo ? (media.currentSrc || media.src) : media.src;
+    if (isVideo) {
+      enlargedMedia.controls = true;
+      enlargedMedia.autoplay = true;
+      enlargedMedia.playsInline = true;
+    } else {
+      enlargedMedia.alt = media.alt;
+    }
+    lightboxContent.replaceChildren(enlargedMedia);
+    lightboxOpener = opener;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  };
+
+  document.querySelectorAll('.gallery-img, .gallery-video').forEach(media => {
+    media.tabIndex = 0;
+    media.setAttribute('role', 'button');
+    media.setAttribute('aria-label', media instanceof HTMLVideoElement ? media.getAttribute('aria-label') : `View image closely: ${media.alt}`);
+    media.setAttribute('aria-haspopup', 'dialog');
+    media.addEventListener('click', () => openLightbox(media, media));
+    media.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(media, media);
+      }
     });
   });
 
   const closeLightbox = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
+    if (lightboxOpener) lightboxOpener.focus();
   };
   lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (e) => {

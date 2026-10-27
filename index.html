@@ -58,12 +58,12 @@
       <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
         <span class="visual-sparkle sparkle-one" aria-hidden="true">✳</span>
         <span class="visual-sparkle sparkle-two" aria-hidden="true">✦</span>
-        <img
-          class="hero-image"
-          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85"
-          alt="A woman in a striking, tailored fashion look"
-          fetchpriority="high"
-        />
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-label="OMA fashion video">
+          <source src="assets/videos/main.mp4" type="video/mp4" />
+        </video>
+        <button class="hero-mute-toggle" id="heroMuteToggle" type="button" aria-label="Unmute video" aria-pressed="false">
+          <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+        </button>
         <div class="hero-image-caption"><span>THE OMA EDIT</span><span>VOL. 01 — EVERYDAY ICON</span></div>
         <div class="hero-stamp" aria-hidden="true"><span>OMA</span><small>MADE TO<br />FEEL LIKE YOU</small></div>
       </div>
@@ -81,7 +81,7 @@
       <div class="container about-grid">
         <div class="about-visual" data-aos="fade-right">
           <span class="visual-sparkle story-sparkle" aria-hidden="true">✳</span>
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85" alt="A confident woman, effortlessly herself" loading="lazy" />
+          <img src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.10.jpeg" alt="Jewelry from the OMA collection" loading="lazy" />
           <div class="about-note"><span class="note-star">✳</span><span>Wear what<br />moves you.</span></div>
           <span class="image-index">01 / THE OMA FEELING</span>
         </div>
@@ -141,33 +141,168 @@
         </div>
         <div class="gallery-grid" id="galleryGrid">
           <article class="gallery-item" data-category="hairs" data-aos="fade-up">
-            <div class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85" alt="Soft waves and a confident look" loading="lazy" />
-              <div class="gallery-overlay"><span class="gallery-category">HAIR</span><h3>Soft wave energy</h3><p>Easy, beautiful, all yours.</p><button class="gallery-zoom" aria-label="View Soft wave energy"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/main.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 1"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
             </div>
           </article>
-          <article class="gallery-item" data-category="jewelry" data-aos="fade-up" data-aos-delay="70">
-            <div class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="Gold jewelry arranged in a warm editorial still life" loading="lazy" />
-              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span><h3>A golden little thing</h3><p>Your everyday, with a glow.</p><button class="gallery-zoom" aria-label="View A golden little thing"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2011.49.44.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 2"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2011.57.56.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 3"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2012.10.01.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 4"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2012.46.03.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 5"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2012.46.04%20%281%29.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 6"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2012.46.04.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 7"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="hairs" data-aos="fade-up">
+            <div class="gallery-card"><video class="gallery-video" src="assets/videos/WhatsApp%20Video%202026-10-26%20at%2012.46.06.mp4" muted loop autoplay playsinline preload="metadata" aria-label="Hair video 8"></video>
+              <div class="gallery-overlay"><span class="gallery-category">HAIR</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.00%20%281%29.jpeg" alt="OMA jewelry collection piece 1" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.00.jpeg" alt="OMA jewelry collection piece 2" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.01%20%281%29.jpeg" alt="OMA jewelry collection piece 3" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.01.jpeg" alt="OMA jewelry collection piece 4" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.02%20%281%29.jpeg" alt="OMA jewelry collection piece 5" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.02.jpeg" alt="OMA jewelry collection piece 6" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.05%20%281%29.jpeg" alt="OMA jewelry collection piece 7" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.05%20%282%29.jpeg" alt="OMA jewelry collection piece 8" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.05.jpeg" alt="OMA jewelry collection piece 9" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.06%20%281%29.jpeg" alt="OMA jewelry collection piece 10" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.06%20%282%29.jpeg" alt="OMA jewelry collection piece 11" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.06%20%283%29.jpeg" alt="OMA jewelry collection piece 12" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.06.jpeg" alt="OMA jewelry collection piece 13" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.07%20%281%29.jpeg" alt="OMA jewelry collection piece 14" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.07%20%282%29.jpeg" alt="OMA jewelry collection piece 15" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.07.jpeg" alt="OMA jewelry collection piece 16" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.08%20%281%29.jpeg" alt="OMA jewelry collection piece 17" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.08%20%282%29.jpeg" alt="OMA jewelry collection piece 18" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.08.jpeg" alt="OMA jewelry collection piece 19" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.09%20%281%29.jpeg" alt="OMA jewelry collection piece 20" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.09%20%282%29.jpeg" alt="OMA jewelry collection piece 21" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.09.jpeg" alt="OMA jewelry collection piece 22" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
+            </div>
+          </article>
+          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
+            <div class="gallery-card"><img class="gallery-img" src="assets/images/jewelry/WhatsApp%20Image%202026-10-26%20at%2011.34.10.jpeg" alt="OMA jewelry collection piece 23" loading="lazy" />
+              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span></div>
             </div>
           </article>
           <article class="gallery-item" data-category="clothing" data-aos="fade-up" data-aos-delay="140">
             <div class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85" alt="Modern statement clothing in a sunlit fashion portrait" loading="lazy" />
-              <div class="gallery-overlay"><span class="gallery-category">CLOTHING</span><h3>Made for the moment</h3><p>Wear it like you mean it.</p><button class="gallery-zoom" aria-label="View Made for the moment"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-            </div>
-          </article>
-          <article class="gallery-item" data-category="jewelry" data-aos="fade-up">
-            <div class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85" alt="Delicate gold jewelry detail" loading="lazy" />
-              <div class="gallery-overlay"><span class="gallery-category">JEWELRY</span><h3>Little golden details</h3><p>The ones you never take off.</p><button class="gallery-zoom" aria-label="View Little golden details"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-            </div>
-          </article>
-          <article class="gallery-item" data-category="hairs" data-aos="fade-up" data-aos-delay="70">
-            <div class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="A rich, natural-looking hairstyle in an editorial portrait" loading="lazy" />
-              <div class="gallery-overlay"><span class="gallery-category">HAIR</span><h3>All eyes on you</h3><p>A little drama, a lot of you.</p><button class="gallery-zoom" aria-label="View All eyes on you"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+              <div class="gallery-overlay"><span class="gallery-category">CLOTHING</span><h3>Made for the moment</h3><p>Wear it like you mean it.</p></div>
             </div>
           </article>
           <article class="gallery-item" data-category="clothing" data-aos="fade-up" data-aos-delay="140">
             <div class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85&sat=-20" alt="A relaxed, modern style look" loading="lazy" />
-              <div class="gallery-overlay"><span class="gallery-category">CLOTHING</span><h3>Off-duty, on point</h3><p>Comfort with a point of view.</p><button class="gallery-zoom" aria-label="View Off-duty, on point"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+              <div class="gallery-overlay"><span class="gallery-category">CLOTHING</span><h3>Off-duty, on point</h3><p>Comfort with a point of view.</p></div>
             </div>
           </article>
         </div>
